@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-source 'https://github.com'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
@@ -47,7 +46,9 @@ gem 'angularjs-rails'
 
 # gem 'angular-rails-templates'
 
-gem 'angular-google-maps', '2.0.6', github: 'angular-ui/angular-google-maps'
+# source 'https://github.com/angular-ui/angular-google-maps.git'
+# gem 'angular-google-maps', '2.0.6', :git => 'https://github.com/angular-ui/angular-google-maps.git'
+
 #gem 'angular-ui-calendar', '~> 2.0.6', github: 'angular-ui'
 
 
