@@ -1,7 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'angularjs-rails'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 # Use sqlite3 as the database for Active Record
@@ -43,6 +41,8 @@ gem 'devise'
 gem 'bluebird'
 # gem 'lodash'
 # gem 'railties' '~> 4.0'
+
+gem 'angularjs-rails'
 
 # gem 'angular-rails-templates'
 
