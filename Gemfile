@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'angularjs-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
@@ -10,7 +11,7 @@ gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
-#gem 'coffee-rails', '~> 4.0.0'
+gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
@@ -38,4 +39,14 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem 'devise'
-gem 'angular-rails-templates'
+
+gem 'bluebird'
+# gem 'lodash'
+# gem 'railties' '~> 4.0'
+
+# gem 'angular-rails-templates'
+
+gem 'angular-google-maps', '2.0.6', github: 'angular-ui/angular-google-maps'
+#gem 'angular-ui-calendar', '~> 2.0.6', github: 'angular-ui'
+
+

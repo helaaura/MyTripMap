@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 	devise_for :users
 
-	# root 'welcome#index' ================> redirection authentification si non authentifié, si non à la carte
+root 'maps#index' # ================> redirection authentification si non authentifié, si non à la carte
 
 	resources :locations do
 		resources :pictures
