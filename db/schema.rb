@@ -11,7 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141024162824) do
+ActiveRecord::Schema.define(version: 20141026094211) do
+
+  create_table "locations", force: true do |t|
+    t.float    "latitude"
+    t.float    "altitude"
+    t.string   "placeName"
+    t.string   "country"
+    t.string   "city"
+    t.integer  "User_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "locations", ["User_id"], name: "index_locations_on_User_id"
+
+  create_table "pictures", force: true do |t|
+    t.string   "title"
+    t.string   "fileName"
+    t.datetime "dateTimeTaken"
+    t.text     "comment"
+    t.integer  "Location_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "pictures", ["Location_id"], name: "index_pictures_on_Location_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
