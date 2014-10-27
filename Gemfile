@@ -42,7 +42,7 @@ gem 'bluebird'
 # gem 'lodash'
 # gem 'railties' '~> 4.0'
 
-gem 'angularjs-rails'
+gem 'angularjs-rails' , '1.3.0'
 
 # gem 'angular-rails-templates'
 
