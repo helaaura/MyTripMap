@@ -42,13 +42,14 @@ gem 'bluebird'
 # gem 'lodash'
 # gem 'railties' '~> 4.0'
 
-gem 'angularjs-rails'
+gem 'angularjs-rails', '1.3.0'
 
 # gem 'angular-rails-templates'
 
+
+# NE MARCHE PAS AVEC GEMFILE
 # source 'https://github.com/angular-ui/angular-google-maps.git'
 # gem 'angular-google-maps', '2.0.6', :git => 'https://github.com/angular-ui/angular-google-maps.git'
-
 #gem 'angular-ui-calendar', '~> 2.0.6', github: 'angular-ui'
 
 

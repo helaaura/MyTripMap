@@ -1,10 +1,6 @@
-<!DOCTYPE html>
 <html>
 	<head>
 		<title>MyTripMap1</title>
-		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-
 		<style type="text/css">
 			html, body, #map-canvas {
 				height: 100%;
@@ -26,17 +22,10 @@
 			}
 			google.maps.event.addDomListener(window, 'load', initialize);
 		</script>
-		<%= csrf_meta_tags %>
+		
 	</head>
 	<body>
-		<p class="notice">
-			<%= notice %>
-		</p>
-		<p class="alert">
-			<%= alert %>
-		</p>
-
-		<%= yield %>
-
+		<div id="map-canvas"> </div>
+		<p>ok</p>
 	</body>
 </html>

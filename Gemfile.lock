@@ -1,9 +1,3 @@
-GIT
-  remote: https://github.com/angular-ui/angular-google-maps.git
-  revision: 9a1c0888f736d16cce2399bb2d127b8f781e71fa
-  specs:
-    angular-google-maps (2.0.6)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -33,7 +27,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
-    angularjs-rails (1.2.26)
+    angularjs-rails (1.3.0)
     arel (5.0.1.20140414130214)
     bcrypt (3.1.9)
     bcrypt (3.1.9-x86-mingw32)
@@ -139,8 +133,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  angular-google-maps (= 2.0.6)!
-  angularjs-rails
+  angularjs-rails (= 1.3.0)
   bluebird
   coffee-rails (~> 4.0.0)
   devise
