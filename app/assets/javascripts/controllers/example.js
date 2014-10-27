@@ -1,25 +1,3 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
-//(function() {
-	// var app = angular.module("angular-google-maps-sol", ["google-maps".ns()]);
-	// app.controller("MyMapController", function ($scope) {
-		// angular.extend($scope, {
-			// centerProperty: {
-				// lat: 45,
-				// lng: -73
-			// },
-			// zoomProperty: 8,
-			// markersProperty: [ {
-					// latitude: 45,
-					// longitude: -74
-				// }],
-			// clickedLatitudeProperty: null,	
-			// clickedLongitudeProperty: null,
-		// });
-	// });
-		// console.log("ok");
-//});
-
 angular.module("angular-google-maps-example", ["google-maps".ns()])
 
 .value("rndAddToLatLon", function () {
@@ -721,4 +699,3 @@ angular.module("angular-google-maps-example", ["google-maps".ns()])
     $scope.map.dynamicMarkers = dynamicMarkers;
   }, 2000);
 }]);
-
