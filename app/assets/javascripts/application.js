@@ -17,6 +17,6 @@
 //= require lodash
 //= require bluebird
 //= require mocks/heat-layer
-//= require templates/info
+//= require controllers/templates/info
 //= require_tree .
 
