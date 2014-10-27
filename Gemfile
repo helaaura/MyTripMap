@@ -46,6 +46,6 @@ gem 'angularjs-rails'
 
 # gem 'angular-rails-templates'
 
-gem 'angular-google-maps', '2.0.6', github: 'angular-ui/angular-google-maps'
+#gem 'angular-google-maps', '2.0.6', github: 'angular-ui/angular-google-maps'
 #gem 'angular-ui-calendar', '~> 2.0.6', github: 'angular-ui'
 
