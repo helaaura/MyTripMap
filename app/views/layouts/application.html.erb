@@ -1,23 +1,28 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>MyTripMap1</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <!-- https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js -->
-  <!-- <%= javascript_include_tag 'application', 'jquery-rails' => true %>
-  <%= javascript_include_tag 'application', 'angularjs-rails' => true %>
-  <%= javascript_include_tag 'application', 'lodash' => true %>
-  <%= javascript_include_tag 'application', 'bluebird' => true %>
-  <%= javascript_include_tag 'application', 'angular-google-maps' => true %> -->
-    <%= csrf_meta_tags %>
-</head>
-<body>
-	ohoy
-	 <p class="notice"><%= notice %></p>
-     <p class="alert"><%= alert %></p>
+<html xmlns:ng="http://angularjs.org" id='ng-app' ng-app="angular-google-maps-example">
+	<head>
+		<title>MyTripMap1</title>
+		<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet"
+          type="text/css">
+		<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,600,300,700'
+        	rel='stylesheet' type='text/css'>
+          
+		<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+		
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8RMXnE6nvNAklrNaxlBWBqQoD3LZtJ9I"></script>
+		<%= csrf_meta_tags %>
+	</head>
+	<body ng-controller="ExampleController">
+		<p class="notice">
+			<%= notice %>
+		</p>
+		<p class="alert">
+			<%= alert %>
+		</p>
 
-<%= yield %>
+		<%= yield %>
 
-</body>
+	</body>
 </html>

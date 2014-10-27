@@ -12,7 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree
 //= require angular
-//= require angular-google-maps
+//= require turbolinks
+//= require lodash
+//= require bluebird
+//= require mocks/heat-layer
+//= require templates/info
+//= require_tree .
+
