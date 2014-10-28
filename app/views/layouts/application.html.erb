@@ -1,20 +1,18 @@
 <!DOCTYPE html>
-<html xmlns:ng="http://angularjs.org" id='ng-app' ng-app="angular-google-maps-example">
+<html xmlns:ng="http://angularjs.org" id='ng-app' ng-app="angular-google-maps-sol">
 	<head>
 		<title>MyTripMap1</title>
-		<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet"
-          type="text/css">
+		
 		<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,600,300,700'
         	rel='stylesheet' type='text/css'>
           
-		<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
 		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 		
 		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8RMXnE6nvNAklrNaxlBWBqQoD3LZtJ9I"></script>
 		<%= csrf_meta_tags %>
 	</head>
-	<body ng-controller="ExampleController">
+	<body>
 		<p class="notice">
 			<%= notice %>
 		</p>

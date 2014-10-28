@@ -16,7 +16,5 @@
 //= require turbolinks
 //= require lodash
 //= require bluebird
-//= require mocks/heat-layer
-//= require controllers/templates/info
 //= require_tree .
 
