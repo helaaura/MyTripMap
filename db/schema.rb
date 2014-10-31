@@ -11,7 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141026162827) do
+ActiveRecord::Schema.define(version: 20141031211018) do
+
+  create_table "album", force: true do |t|
+    t.text    "name"
+    t.text    "file_name"
+    t.integer "date_creation"
+    t.text    "comment"
+    t.integer "location_id"
+    t.integer "user_id"
+  end
+
+  create_table "albums", force: true do |t|
+    t.string   "name"
+    t.string   "file_name"
+    t.datetime "creation_date"
+    t.text     "comment"
+    t.integer  "location_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "albums", ["location_id"], name: "index_albums_on_location_id"
+  add_index "albums", ["user_id"], name: "index_albums_on_user_id"
 
   create_table "locations", force: true do |t|
     t.float    "latitude"
@@ -27,16 +50,14 @@ ActiveRecord::Schema.define(version: 20141026162827) do
   add_index "locations", ["User_id"], name: "index_locations_on_User_id"
 
   create_table "pictures", force: true do |t|
-    t.string   "title"
-    t.string   "fileName"
-    t.datetime "dateTimeTaken"
+    t.string   "name"
+    t.string   "file_name"
+    t.datetime "date_time_taken"
     t.text     "comment"
-    t.integer  "Location_id"
+    t.integer  "album_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "pictures", ["Location_id"], name: "index_pictures_on_Location_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
