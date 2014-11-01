@@ -3,9 +3,11 @@ Rails.application.routes.draw do
 
 root 'maps#index' # ================> redirection authentification si non authentifié, si non à la carte
 
-	resources :locations do
+	resources :users do
 		resources :pictures
 	end
+	
+	resources :users
 
 # The priority is based upon order of creation: first created -> highest priority.
 # See how all your routes lay out with "rake routes".

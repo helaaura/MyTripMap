@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  fileName: MyString
+  pdateTimeTaken: 
+  comment: MyText
+  User_id: 
+  Location_id: 
+
+two:
+  name: MyString
+  fileName: MyString
+  pdateTimeTaken: 
+  comment: MyText
+  User_id: 
+  Location_id: 

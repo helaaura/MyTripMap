@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141026162827) do
+ActiveRecord::Schema.define(version: 20141031210637) do
+
+  create_table "albums", force: true do |t|
+    t.string   "name"
+    t.string   "fileName"
+    t.datetime "creationDate"
+    t.text     "comment"
+    t.integer  "User_id"
+    t.integer  "Location_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "albums", ["Location_id"], name: "index_albums_on_Location_id"
+  add_index "albums", ["User_id"], name: "index_albums_on_User_id"
 
   create_table "locations", force: true do |t|
     t.float    "latitude"

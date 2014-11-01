@@ -16,5 +16,6 @@
 //= require turbolinks
 //= require lodash
 //= require bluebird
+//= require angular-google-maps
 //= require_tree .
 

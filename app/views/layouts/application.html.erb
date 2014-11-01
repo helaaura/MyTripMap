@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html xmlns:ng="http://angularjs.org" id='ng-app' ng-app="angular-google-maps-sol">
+<html xmlns:ng="http://angularjs.org" id='ng-app' ng-app="my-trip-maps">
 	<head>
-		<title>MyTripMap1</title>
+		<title>My Trip Map</title>
 		
 		<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,600,300,700'
         	rel='stylesheet' type='text/css'>
-          
 		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 		
-		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8RMXnE6nvNAklrNaxlBWBqQoD3LZtJ9I"></script>
+		<script type="text/javascript" src='https:://maps.googleapis.com/maps/api/js?sensor=false'></script>
 		<%= csrf_meta_tags %>
 	</head>
 	<body>
