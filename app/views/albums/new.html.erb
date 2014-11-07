@@ -1,0 +1,15 @@
+<%= form_for :album , url: albums_path do |f|%>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.label :file_name %><br>
+    <%= f.text_area :file_name %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
