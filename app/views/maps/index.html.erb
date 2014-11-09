@@ -1,18 +1,28 @@
-<!--	You can use either a div having class 'google-map' or the '<ui-gmap-google-map>' element; in
-    the latter case, uncomment the style above to make sure the custom elements gets block display	-->
-<div ng-controller="MyMapController">
-	<div class="row-fluid" ng-if="map.show">
-	    <ui-gmap-google-map class="span8"
-	         center="map.center"
-	         zoom="map.zoom"
-	         dragging="map.dragging"
-	         bounds="map.bounds"
-	         events="map.events"
-	         options="map.options"
-	         pan="true"
-	         control="map.control"
-	        >
-	
-		</ui-gmap-google-map>
-	</div>
+<!-- You can use either a div having class 'google-map' or the '<ui-gmap-google-map>' element; in 
+    the latter case, uncomment the style above to make sure the custom elements gets block display -->
+<div ng-controller="tripMapController as tripMapCtlr">
+     <!-- <ui-gmap-google-map class="span8"
+          center="map.center"
+          zoom="map.zoom"
+          dragging="map.dragging"
+          bounds="map.bounds"
+          events="map.events"
+          options="map.options"
+          pan="true"
+          control="map.control"
+         >
+   style="height: 500px; width: 500px;"
+ 
+  </ui-gmap-google-map> -->
+  <ui-gmap-google-map 
+   center="tripMapCtlr.map.center" 
+   zoom="tripMapCtlr.map.zoom"
+   control="tripMapCtlr.map.control"
+   events="tripMapCtlr.map.events"
+   bounds="tripMapCtlr.map.bounds"
+   options="tripMapCtlr.map.options"
+   >
+  
+  </ui-gmap-google-map>
+
 </div>

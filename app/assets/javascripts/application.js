@@ -14,7 +14,8 @@
 //= require jquery_ujs
 //= require angular
 //= require turbolinks
-//= require_tree ./map
-//= require_tree ./google_map
+//= require lodash
+//= require bluebird
+//= require angular-google-maps
 //= require_tree .
 
