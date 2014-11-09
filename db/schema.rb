@@ -11,16 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141031211018) do
-
-  create_table "album", force: true do |t|
-    t.text    "name"
-    t.text    "file_name"
-    t.integer "date_creation"
-    t.text    "comment"
-    t.integer "location_id"
-    t.integer "user_id"
-  end
+ActiveRecord::Schema.define(version: 20141108181225) do
 
   create_table "albums", force: true do |t|
     t.string   "name"
@@ -37,17 +28,14 @@ ActiveRecord::Schema.define(version: 20141031211018) do
   add_index "albums", ["user_id"], name: "index_albums_on_user_id"
 
   create_table "locations", force: true do |t|
-    t.float    "latitude"
-    t.float    "altitude"
-    t.string   "placeName"
-    t.string   "country"
+    t.string   "place"
     t.string   "city"
-    t.integer  "User_id"
+    t.string   "country"
+    t.float    "latitude"
+    t.float    "longitude"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "locations", ["User_id"], name: "index_locations_on_User_id"
 
   create_table "pictures", force: true do |t|
     t.string   "name"
