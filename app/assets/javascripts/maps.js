@@ -1,4 +1,4 @@
-var app = angular.module("my-trip-maps", ["google-maps".ns()]).config(['GoogleMapApiProvider'.ns(),
+var app = angular.module("my-trip-maps", ["google-maps".ns(), "ngAnimate"]).config(['GoogleMapApiProvider'.ns(),
 function(GoogleMapApi) {
 	GoogleMapApi.configure({
 		key : 'AIzaSyB8RMXnE6nvNAklrNaxlBWBqQoD3LZtJ9I',

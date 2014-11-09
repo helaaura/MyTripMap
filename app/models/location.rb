@@ -3,3 +3,6 @@ class Location < ActiveRecord::Base
    has_many :pictruces, dependent: :destroy
 
 end
+
+
+

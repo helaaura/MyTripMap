@@ -38,14 +38,16 @@ ActiveRecord::Schema.define(version: 20141108181225) do
   end
 
   create_table "pictures", force: true do |t|
-    t.string   "name"
-    t.string   "file_name"
-    t.datetime "date_time_taken"
+    t.string   "title"
+    t.string   "fileName"
+    t.datetime "dateTimeTaken"
     t.text     "comment"
-    t.integer  "album_id"
+    t.integer  "Location_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "pictures", ["Location_id"], name: "index_pictures_on_Location_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

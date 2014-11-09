@@ -1,0 +1,20 @@
+<div class="palette_laf check-element animate-hide">
+	<div class="palette_title_block">
+		<span class="palette_title">
+			Album's Palette
+		</span>
+		<span class="fold_unfold">
+			<!-- TODO to be replaced by an img -->
+			<a href ng-click="foldingCtrl.changeFolding()">__</a>
+		</span>
+		<br />
+	</div>
+	
+	<!-- TODO loop on album/image directives -->
+	<div class="palette_content animate-hide" ng-hide="foldingCtrl.isFolded" ng-init="table = ['a', 'b', 'c']">
+		<div ng-repeat="i in table">
+			<!-- <albmu></album> -->
+			<center><p>Mon album </p></center>
+		</div>
+	</div>
+</div>

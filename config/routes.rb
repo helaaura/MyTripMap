@@ -9,7 +9,6 @@ root 'maps#index' # ================> redirection authentification si non authen
 	  end
   end
   
-		
 # The priority is based upon order of creation: first created -> highest priority.
 # See how all your routes lay out with "rake routes".
 
