@@ -25,7 +25,6 @@
 	background-image: linear-gradient(top, #00ffeb, transparent);
 	background-clip: padding-box;
 	opacity: 0.75;
-	margin-right: 80%;
 }
 
 /* The title is in left*/
@@ -44,6 +43,3 @@
 	padding-bottom: 180%;
 }
 
-.palette_title_block {
-
-}

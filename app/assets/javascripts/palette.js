@@ -4,13 +4,17 @@ app.directive("palette", function() {
 		restrict: "E",
 		templateUrl: "assets/template/palette.html",
 		
-		controller: function() {
+		controller: function($scope) {
 			this.isFolded = false;
 			this.changeFolding = function() {
 				this.isFolded = !this.isFolded;
 			};
 		},
-		controllerAs: "foldingCtrl"
+		controllerAs: "foldingCtrl",
+		transclude: true,
+		scope: {
+			type: '@'
+		}
 	};
 });
 

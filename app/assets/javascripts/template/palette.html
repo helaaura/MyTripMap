@@ -1,7 +1,7 @@
 <div class="palette_laf check-element animate-hide">
 	<div class="palette_title_block">
 		<span class="palette_title">
-			Album's Palette
+			{{type}}'s Palette
 		</span>
 		<span class="fold_unfold">
 			<!-- TODO to be replaced by an img -->
@@ -14,7 +14,7 @@
 	<div class="palette_content animate-hide" ng-hide="foldingCtrl.isFolded" ng-init="table = ['a', 'b', 'c']">
 		<div ng-repeat="i in table">
 			<!-- <albmu></album> -->
-			<center><p>Mon album </p></center>
+			<center><p>Mon {{type}} </p></center>
 		</div>
 	</div>
 </div>
