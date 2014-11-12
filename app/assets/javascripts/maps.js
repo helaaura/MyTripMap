@@ -10,8 +10,10 @@ function(GoogleMapApi) {
 app.controller("tripMapController", ["Logger".ns(), "GoogleMapApi".ns(),
 function(log, GoogleMapApi) {
 	log.doLog = true;
-	var tripMapControllerScope = this;
+	this.loading = true;
+	var scope = this;
 	GoogleMapApi.then(function(maps) {
+		scope.loading = false;
 		log.info("google map sdk loaded");
 	});
 
