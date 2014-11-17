@@ -40,6 +40,7 @@
 
 /* to have all the height of the palette */
 .palette_content {
-	padding-bottom: 180%;
+	padding-bottom: 145%;
+	/*padding-bottom: 180%;*/
 }
 

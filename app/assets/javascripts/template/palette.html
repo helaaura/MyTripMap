@@ -5,16 +5,23 @@
 		</span>
 		<span class="fold_unfold">
 			<!-- TODO to be replaced by an img -->
-			<a href ng-click="foldingCtrl.changeFolding()">__</a>
+			<a href ng-click="paletteCtrl.changeFolding()">__</a>
 		</span>
 		<br />
 	</div>
 	
 	<!-- TODO loop on album/image directives -->
-	<div class="palette_content animate-hide" ng-hide="foldingCtrl.isFolded" ng-init="table = ['a', 'b', 'c']">
+	<div class="palette_content animate-hide" ng-hide="paletteCtrl.isFolded" ng-init="table = ['a', 'b', 'c']">
 		<div ng-repeat="i in table">
-			<!-- <albmu></album> -->
 			<center><p>Mon {{type}} </p></center>
+			<div ng-show="paletteCtrl.isForAlbum">
+				<!-- <album></album> -->
+				albums content
+			</div>
+			<div ng-show="paletteCtrl.isForImage">
+				<!-- <image></image> -->
+				images content
+			</div>
 		</div>
 	</div>
 </div>
