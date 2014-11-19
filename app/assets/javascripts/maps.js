@@ -1,4 +1,4 @@
-var app = angular.module("my-trip-maps", ["google-maps".ns(), "ngAnimate"]).config(['GoogleMapApiProvider'.ns(),
+var app = angular.module("my-trip-maps", ["google-maps".ns(), "ngAnimate", "ui.bootstrap"]).config(['GoogleMapApiProvider'.ns(),
 function(GoogleMapApi) {
 	GoogleMapApi.configure({
 		key : 'AIzaSyB8RMXnE6nvNAklrNaxlBWBqQoD3LZtJ9I',
@@ -7,17 +7,17 @@ function(GoogleMapApi) {
 	});
 }]);
 
-app.controller("tripMapController", ["Logger".ns(), "GoogleMapApi".ns(),
-function(log, GoogleMapApi) {
+app.controller("tripMapController", ["Logger".ns(), "GoogleMapApi".ns(), "$scope", function(log, GoogleMapApi, $scope) {
 	log.doLog = true;
 	this.loading = true;
+	this.clickCoordinates = {};
 	var scope = this;
 	GoogleMapApi.then(function(maps) {
 		scope.loading = false;
 		log.info("google map sdk loaded");
 	});
 
-	this.map = {
+		this.map = {
 		center : {
 			latitude : 36,
 			longitude : 10
@@ -27,13 +27,17 @@ function(log, GoogleMapApi) {
 		height : '500',
 		events : {
 			click : function(maps, eventName, arguments) {
-				log.info("map clicked in:" + arguments[0].latLng.lat() + ", " + arguments[0].latLng.lng());
+				//log.info("map clicked in:" + arguments[0].latLng.lat() + ", " + arguments[0].latLng.lng());
+				scope.clickCoordinates.latitude = arguments[0].latLng.lat();
+				scope.clickCoordinates.longitude = arguments[0].latLng.lng();
+//				$scope.$apply();
+				console.log(scope.clickCoordinates);
 			},
-		},	
-		options: {
-	        maxZoom: 20,
-	        minZoom: 3
-      	}
+		},
+		options : {
+			maxZoom : 20,
+			minZoom : 3
+		}
 	};
 }]);
 

@@ -1,3 +1,18 @@
+/* palette album position and width */
+.album-palette-position {	
+	position: absolute;
+	top: 1em;
+	width: 20%;
+}
+
+/* palette image position and width */
+.img-palette-position {
+	position: absolute;
+	top: 1em;
+	right: 1em;
+	width: 23%;
+}
+
 /* state and animation of palette*/
 .animate-hide {
     -webkit-transition:all linear 0.5s;
@@ -40,7 +55,13 @@
 
 /* to have all the height of the palette */
 .palette_content {
-	padding-bottom: 145%;
+	padding-bottom: 152%;
+	/* padding-bottom: 145%; */
 	/*padding-bottom: 180%;*/
 }
 
+.click-coordinates-position {
+	position: absolute;
+	top: 1em;
+	left: 40%;
+}
