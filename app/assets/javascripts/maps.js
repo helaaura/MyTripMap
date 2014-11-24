@@ -8,6 +8,7 @@ function(GoogleMapApi) {
 }]);
 
 app.controller("tripMapController", ["Logger".ns(), "GoogleMapApi".ns(), "$scope", function(log, GoogleMapApi, $scope) {
+	console.log("tripMapController init");
 	log.doLog = true;
 	this.loading = true;
 	this.clickCoordinates = {};

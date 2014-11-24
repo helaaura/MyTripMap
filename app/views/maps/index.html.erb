@@ -1,111 +1,103 @@
-
-<!--	You can use either a div having class 'google-map' or the '<ui-gmap-google-map>' element; in 
-    the latter case, uncomment the style above to make sure the custom elements gets block display	-->
+<!--	You can use either a div having class 'google-map' or the '<ui-gmap-google-map>' element; in
+the latter case, uncomment the style above to make sure the custom elements gets block display	-->
 <div ng-controller="tripMapController as tripMapCtlr">
-	    <!-- <ui-gmap-google-map class="span8"
-	         center="map.center"
-	         zoom="map.zoom"
-	         dragging="map.dragging"
-	         bounds="map.bounds"
-	         events="map.events"
-	         options="map.options"
-	         pan="true"
-	         control="map.control"
-	        >
-			style="height: 500px; width: 500px;"
-	
-		</ui-gmap-google-map> -->
-				
-		<div>
-			<ui-gmap-google-map 
-				center="tripMapCtlr.map.center" 
-				zoom="tripMapCtlr.map.zoom"
-				control="tripMapCtlr.map.control"
-				events="tripMapCtlr.map.events"
-				bounds="tripMapCtlr.map.bounds"
-				options="tripMapCtlr.map.options"
-				>
-			
-			</ui-gmap-google-map>
-		</div>
-		<!-- palette album -->
-		<div ng-controller="paletteAlbumController as paletteAlbumCtrl">
-				<div class="album-palette-position palette_laf check-element animate-hide">
-					<div class="palette_title_block">
-						<span class="add">
-							<!-- TODO to be replaced by an img -->
-							<a href ng-click="paletteAlbumCtrl.add()">+</a>
-						</span>
-						<span class="palette_title">
-							album's Palette
-						</span>
-						<span class="fold_unfold">
-							<!-- TODO to be replaced by an img -->
-							<a href ng-click="paletteAlbumCtrl.changeFolding()">__</a>
-						</span>
-						<br />
-					</div>
-					
-					<!-- TODO loop on album/image directives -->
-					<div class="palette_content animate-hide" ng-hide="paletteAlbumCtrl.isFolded" ng-init="table = ['a', 'b', 'c']">
-						<div ng-repeat="i in table">
-							<center><p>Mon album {{i}} </p></center>
-						</div>
-					</div>
-				</div>
-				<!-- palette image -->
-				<div type="image" class="img-palette-position" ng-controller="paletteImageController as paletteImageCtrl">
-						<div class="palette_laf check-element animate-hide">
-							<div class="palette_title_block">
-								<span class="add">
-									<!-- TODO to be replaced by an img -->
-									<a href ng-click="paletteImageCtrl.add()">+</a>
-								</span>
-								<span class="palette_title">
-									image's Palette
-								</span>
-								<span class="fold_unfold">
-									<!-- TODO to be replaced by an img -->
-									<a href ng-click="paletteImageCtrl.changeFolding()">__</a>
-								</span>
-								<br />
-							</div>
-							
-							<!-- TODO loop on album/image directives -->
-							<div class="palette_content animate-hide" ng-hide="paletteImageCtrl.isFolded" ng-init="table = ['a', 'b', 'c']">
-								<div ng-repeat="i in table">
-									<center><p>Mon image {{i}} </p></center>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					
-			<div controller="locationCoordinatesController as locationCoordinatesCtrl" 
-				class="click-coordinates-position" ng-show="paletteAlbumCtrl.showClickCoordinates">
-					<div class="modal-header">
-						<h3 class="modal-title">Click on picture's location</h3>
-					</div>
-					<div class="modal-body">
-					    <label>Latitude: </label>
-					    <input type="text" ng-model="newLocationCoordinates.latitude"/><br>
-					    
-					    <label>Longitude</label>
-					    <input type="text" ng-model="newLocationCoordinates.longitude"/>
-					</div>
-					<div class="modal-footer">
-						<button class="btn btn-primary" disabled="{{hasCoordinates}}" ng-click="save()">Save</button>
-						<button class="btn btn-primary" ng-click="cancel()">Canel</button>
-					</div>
+	<!-- <ui-gmap-google-map class="span8"
+	center="map.center"
+	zoom="map.zoom"
+	dragging="map.dragging"
+	bounds="map.bounds"
+	events="map.events"
+	options="map.options"
+	pan="true"
+	control="map.control"
+	>
+	style="height: 500px; width: 500px;"
+
+	</ui-gmap-google-map> -->
+
+	<div>
+		<ui-gmap-google-map
+		center="tripMapCtlr.map.center"
+		zoom="tripMapCtlr.map.zoom"
+		control="tripMapCtlr.map.control"
+		events="tripMapCtlr.map.events"
+		bounds="tripMapCtlr.map.bounds"
+		options="tripMapCtlr.map.options"
+		>
+
+		</ui-gmap-google-map>
+	</div>
+	<!-- palette album -->
+	<div ng-controller="paletteAlbumController as paletteAlbumCtrl">
+		<div class="album-palette-position palette_laf check-element animate-hide">
+			<div class="palette_title_block">
+				<span class="add"> <!-- TODO to be replaced by an img --> <a href ng-click="paletteAlbumCtrl.add()">+</a> </span>
+				<span class="palette_title"> album's Palette </span>
+				<span class="fold_unfold"> <!-- TODO to be replaced by an img --> <a href ng-click="paletteAlbumCtrl.changeFolding()">__</a> </span>
+				<br />
 			</div>
-			
+
+			<!-- TODO loop on album/image directives -->
+			<div class="palette_content animate-hide" ng-hide="paletteAlbumCtrl.isFolded" ng-init="table = ['a', 'b', 'c']">
+				<div ng-repeat="i in table">
+					<center>
+						<p>
+							Mon album {{i}}
+						</p>
+					</center>
 				</div>
 			</div>
 		</div>
-		
-		
-		<div class="preloading-position" ng-show="tripMapCtlr.loading">
-			<img src="assets/preloader.gif"/>
+		<!-- palette image -->
+		<div type="image" class="img-palette-position" ng-controller="paletteImageController as paletteImageCtrl">
+			<div class="palette_laf check-element animate-hide">
+				<div class="palette_title_block">
+					<span class="add"> <!-- TODO to be replaced by an img --> <a href ng-click="paletteImageCtrl.add()">+</a> </span>
+					<span class="palette_title"> image's Palette </span>
+					<span class="fold_unfold"> <!-- TODO to be replaced by an img --> <a href ng-click="paletteImageCtrl.changeFolding()">__</a> </span>
+					<br />
+				</div>
+
+				<!-- TODO loop on album/image directives -->
+				<div class="palette_content animate-hide" ng-hide="paletteImageCtrl.isFolded" ng-init="table = ['a', 'b', 'c']">
+					<div ng-repeat="i in table">
+						<center>
+							<p>
+								Mon image {{i}}
+							</p>
+						</center>
+					</div>
+				</div>
+			</div>
 		</div>
+
+		<div controller="coordinatesController as coordinatesCtrl"
+		class="click-coordinates-position" ng-show="paletteAlbumCtrl.showClickCoordinates">
+			<div class="modal-header">
+				<h3 class="modal-title">Click on picture's location</h3>
+			</div>
+			<div class="modal-body">
+				<label>Latitude: </label>
+				<input type="text" ng-model="coordinatesCtrl.latitude"/>
+				<br>
+
+				<label>Longitude</label>
+				<input type="text" ng-model="coordinatesCtrl.longitude"/>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-primary" disabled="{{hasCoordinates}}" ng-click="coordinatesCtrl.save()">
+					Save
+				</button>
+				<button class="btn btn-primary" ng-click="coordinatesCtrl.cancel()">
+					Canel
+				</button>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="preloading-position" ng-show="tripMapCtlr.loading">
+		<img src="assets/preloader.gif"/>
+	</div>
 </div>
 

@@ -17,5 +17,7 @@
 //= require lodash
 //= require bluebird
 //= require angular-google-maps
+//= require maps
+//= require palette
 //= require_tree .
 
