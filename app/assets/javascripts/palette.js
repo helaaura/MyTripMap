@@ -2,7 +2,7 @@ app.controller("paletteAlbumController", ['openModalService', function(openModal
 		console.log("paletteAlbumController init");
 	this.isFolded = false;
 	this.showClickCoordinates = false;
-	var scopePaletteCtrl = this;
+	var scope = this;
 	this.changeFolding = function() {
 		this.isFolded = !this.isFolded;
 	};
@@ -12,24 +12,24 @@ app.controller("paletteAlbumController", ['openModalService', function(openModal
 		var successAlbum = function(newAlbum) {
 			console.log("adding album");
 			//TODO inform user to click on the map to select a location
-			var successLocationCoordinates = function(newLocationCoordinates) {
-				var successLocation = function(newLocation) {
-						newLocation.longitude = newLocationCoordinates.longitude;
-						newLocation.latitude = newLocationCoordinates.latitude;
-						console.log(newAlbum);
-						console.log(newLocation);
-//TODO			saveLocation(newLocation, newAlbum);
-					};
-					var errorLocation = function(newLocation) {
-						console.log('Modal dismissed close: ' + newLocation);
-					};
-				openModalService("add", 'assets/template/createLocation.html', 'locationCtrl', successLocation, errorLocation);
-			};
-			
-			var errorLocationCoordinates = function(newLocationCoordinates) {
-				console.log('Modal dismissed close: ' + newLocationCoordinates);
-			};
-			scopePaletteCtrl.showClickCoordinates = true;
+			// var successLocationCoordinates = function(newLocationCoordinates) {
+				// var successLocation = function(newLocation) {
+						// newLocation.longitude = newLocationCoordinates.longitude;
+						// newLocation.latitude = newLocationCoordinates.latitude;
+						// console.log(newAlbum);
+						// console.log(newLocation);
+// //TODO			saveLocation(newLocation, newAlbum);
+					// };
+					// var errorLocation = function(newLocation) {
+						// console.log('Modal dismissed close: ' + newLocation);
+					// };
+				// openModalService("add", 'assets/template/createLocation.html', 'locationCtrl', successLocation, errorLocation);
+			// };
+// 			
+			// var errorLocationCoordinates = function(newLocationCoordinates) {
+				// console.log('Modal dismissed close: ' + newLocationCoordinates);
+			// };
+			scope.showClickCoordinates = true;
 //			openModalService("add", 'assets/template/createLocationCoordinates.html', 'locationCoordinatesCtrl', successLocationCoordinates, errorLocationCoordinates);
 		};
 		

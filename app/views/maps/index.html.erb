@@ -1,3 +1,4 @@
+
 <!--	You can use either a div having class 'google-map' or the '<ui-gmap-google-map>' element; in
 the latter case, uncomment the style above to make sure the custom elements gets block display	-->
 <div ng-controller="tripMapController as tripMapCtlr">
@@ -71,21 +72,21 @@ the latter case, uncomment the style above to make sure the custom elements gets
 			</div>
 		</div>
 
-		<div controller="coordinatesController as coordinatesCtrl"
+		<div ng-controller="coordinatesController as coordinatesCtrl"
 		class="click-coordinates-position" ng-show="paletteAlbumCtrl.showClickCoordinates">
 			<div class="modal-header">
-				<h3 class="modal-title">Click on picture's location</h3>
+				<h3 class="modal-title" ng-click="coordinatesCtrl.getCoordinates()">Click on picture's location</h3>
 			</div>
 			<div class="modal-body">
 				<label>Latitude: </label>
-				<input type="text" ng-model="coordinatesCtrl.latitude"/>
+				<input type="text" ng-model="coordinatesCtrl.coordinates.latitude"/>
 				<br>
 
 				<label>Longitude</label>
-				<input type="text" ng-model="coordinatesCtrl.longitude"/>
+				<input type="text" ng-model="coordinatesCtrl.coordinates.longitude"/>
 			</div>
 			<div class="modal-footer">
-				<button class="btn btn-primary" disabled="{{hasCoordinates}}" ng-click="coordinatesCtrl.save()">
+				<button class="btn btn-primary" ng-disabled="coordinatesCtrl.waitCoordinates" ng-click="coordinatesCtrl.save()">
 					Save
 				</button>
 				<button class="btn btn-primary" ng-click="coordinatesCtrl.cancel()">
@@ -100,4 +101,5 @@ the latter case, uncomment the style above to make sure the custom elements gets
 		<img src="assets/preloader.gif"/>
 	</div>
 </div>
+
 

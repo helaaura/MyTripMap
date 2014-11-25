@@ -1,29 +1,37 @@
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
 
-app.controller("coordinatesController", ["$scope", function($scope) {
-	console.log("locationCoordinatesController init");
-	this.hasCoordinates = false;
-	this.coordinates = {};
-	// var scope = this;
-			// console.log($scope.tripMapCtlr.clickCoordinates);
-// 	
-	// $scope.$watch('tripMapCtlr.clickCoordinates',	function(newValue) {
-			// scope.hasCoordinates = true;
-			// scope.coordinates = newValue;
-			// console.log(newValue);
-		// });
-//	.tripMapCtlr.
+app.controller("coordinatesController", ["$scope", "openModalService", function($scope, openModalService) {
+	console.log("coordinatesController init");
+  console.log($scope.tripMapCtlr);
+	this.waitCoordinates = true;
+	this.scopeTripMap = $scope.tripMapCtlr;
 	
+	this.getCoordinates = function() {
+		if (this.scopeTripMap.clickCoordinates != {}) {
+			this.coordinates = this.scopeTripMap.clickCoordinates;
+	  	this.waitCoordinates = false;
+	  	console.log(this.coordinates);
+		}
+	};
+
 	this.save = function() {
 		console.log("save =>");
-//		paletteAlbumCtrl.showClickCoordinates = false;
-//		$modalInstance.close(this.newLocationCoordinates);
+		$scope.paletteAlbumCtrl.showClickCoordinates = false;
+		//TODO passer coordinates en argument pour le service
+		var successLocation = function(newLocation) {
+			console.log(newAlbum);
+			console.log(newLocation);
+//TODO			saveLocation(newLocation, newAlbum);
+		};
+		var errorLocation = function(newLocation) {
+			console.log('Modal dismissed close: ' + newLocation);
+		};
+		openModalService("add", 'assets/template/createLocation.html', 'locationCtrl', successLocation, errorLocation);
 	};
 	this.cancel = function() {
 		console.log("cancel =>");
-//		console.log($scope.tripMapCtl);
-//		$modalInstance.dismiss('cancel');
+		$scope.paletteAlbumCtrl.showClickCoordinates = false;
 	};
 }]);
 
@@ -51,6 +59,4 @@ app.factory("saveLocation", ["$http", function($http) {
 		});
 	};
 }]);
-
-
 
