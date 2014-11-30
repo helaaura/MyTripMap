@@ -3,11 +3,20 @@ Rails.application.routes.draw do
 
 root 'maps#index' # ================> redirection authentification si non authentifié, si non à la carte
 
-	resources :locations do 
-	  resources :albums do
-		  resources :pictures
-	  end
-  end
+#	post 'albums/add' =>  'albums#add'
+	
+  resources :albums do
+	  resources :pictures do
+			resource :locations
+	  end 
+	end
+	
+	namespace :api, defaults: {format: :json} do
+  	resources :albums, only: [:index, :create, :update, :destroy] do
+	  	resources :pictures, only: [:index, :create, :update, :destroy]
+  	end
+	end
+	
   
 # The priority is based upon order of creation: first created -> highest priority.
 # See how all your routes lay out with "rake routes".

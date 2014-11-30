@@ -38,35 +38,27 @@ the latter case, uncomment the style above to make sure the custom elements gets
 				<br />
 			</div>
 
-			<!-- TODO loop on album/image directives -->
-			<div class="palette_content animate-hide" ng-hide="paletteAlbumCtrl.isFolded" ng-init="table = ['a', 'b', 'c']">
-				<div ng-repeat="i in table">
-					<center>
-						<p>
-							Mon album {{i}}
-						</p>
-					</center>
+			<!-- TODO loop on album/Picture directives -->
+			<div class="palette_content animate-hide" ng-hide="paletteAlbumCtrl.isFolded" >
+				<div ng-repeat="album in paletteAlbumCtrl.albums">
+					<album></album>
 				</div>
 			</div>
 		</div>
-		<!-- palette image -->
-		<div type="image" class="img-palette-position" ng-controller="paletteImageController as paletteImageCtrl">
+		<!-- palette Picture -->
+		<div type="picture" class="img-palette-position" ng-controller="palettePictureController as palettePictureCtrl">
 			<div class="palette_laf check-element animate-hide">
 				<div class="palette_title_block">
-					<span class="add"> <!-- TODO to be replaced by an img --> <a href ng-click="paletteImageCtrl.add()">+</a> </span>
-					<span class="palette_title"> image's Palette </span>
-					<span class="fold_unfold"> <!-- TODO to be replaced by an img --> <a href ng-click="paletteImageCtrl.changeFolding()">__</a> </span>
+					<span class="add"> <!-- TODO to be replaced by an img --> <a href ng-click="palettePictureCtrl.add()">+</a> </span>
+					<span class="palette_title"> Picture's Palette </span>
+					<span class="fold_unfold"> <!-- TODO to be replaced by an img --> <a href ng-click="palettePictureCtrl.changeFolding()">__</a> </span>
 					<br />
 				</div>
 
-				<!-- TODO loop on album/image directives -->
-				<div class="palette_content animate-hide" ng-hide="paletteImageCtrl.isFolded" ng-init="table = ['a', 'b', 'c']">
-					<div ng-repeat="i in table">
-						<center>
-							<p>
-								Mon image {{i}}
-							</p>
-						</center>
+				<!-- TODO loop on album/Picture directives -->
+				<div class="palette_content animate-hide" ng-hide="palettePictureCtrl.isFolded" >
+					<div ng-repeat="picture in palettePictureCtrl.pictures">
+						<picture></picture>
 					</div>
 				</div>
 			</div>
